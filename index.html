@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-app="myApp" ng-controller="FormController">
+
+  <div class="container">
+    <div class="form-container">
+      <h2>Registration</h2>
+      <form id="registerForm" ng-submit="registerFormSubmit()">
+        <!-- username input -->
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" id="username" ng-model="username">
+        <i class="fas fa-exclamation-circle" ng-show="!username && showErrorIcons"></i>
+        <i class="far fa-check-circle" ng-show="username && showSuccessIcons"></i>
+        <div class="error" ng-show="!username">Please enter a username</div>
+        <!-- password input -->
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" ng-model="password">
+        <i class="fas fa-exclamation-circle" ng-show="!password && showErrorIcons"></i>
+        <i class="far fa-check-circle" ng-show="password && showSuccessIcons"></i>
+       <div class="error" ng-show="!password">Please enter a password</div>
+        <!-- repeat password -->
+        <label for="repeatPassword">Repeat Password</label>
+        <input type="password" placeholder="Repeat Password" id="repeatPassword" ng-model="repeatPassword">
+        <i class="fas fa-exclamation-circle" ng-show="!repeatPassword && showErrorIcons"></i>
+        <i class="far fa-check-circle" ng-show="repeatPassword && showSuccessIcons"></i>
+        <div class="error" ng-show="!repeatPassword">Please repeat the password</div>
+        <!-- email input -->
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" id="email" ng-model="email">
+        <i class="fas fa-exclamation-circle" ng-show="!email && showErrorIcons"></i>
+        <i class="far fa-check-circle" ng-show="email && showSuccessIcons"></i>
+        <div class="error" ng-show="!email">Please enter a valid email address</div>
+        <button type="submit">Submit</button>
+        <button type="button" id="cancelButton" class="btn-cancel" ng-click="cancelForm()">Cancel</button>
+    </form>
+  </div>
+
+    <div class="form-container">
+      <h2>Sign in</h2>
+      <form id="loginForm" ng-submit="loginFormSubmit()">
+        <div>
+          <label for="email"></label>
+          <i class="fas fa-user" ng-hide="showErrorIcons"></i>
+          <input type="text" name="email" id="email" placeholder="Email Address" ng-model="loginEmail">
+          <i class="fas fa-exclamation-circle" ng-show="!loginEmail && showErrorIcons"></i>
+          <i class="far fa-check-circle" ng-show="loginEmail && showSuccessIcons"></i>
+          <div class="error" ng-show="!loginEmail"></div>
+        </div>
+        <div>
+          <label for="password"></label>
+          <i class="fas fa-lock" ng-hide="showErrorIcons"></i>
+          <input type="password" name="password" id="password" placeholder="Create Password" ng-model="loginPassword">
+          <i class="fas fa-exclamation-circle" ng-show="!loginPassword && showErrorIcons"></i>
+          <i class="far fa-check-circle" ng-show="loginPassword && showSuccessIcons"></i>
+          <div class="error" ng-show="!loginPassword"></div>
+        </div>
+        
+        <button type="submit" id="loginbutton" class="btn-login">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-container {
+    margin: 20px;
+    width: 300px;
+    padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+  input, button {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #cancelButton {
+    background-color: #2196F3;
+    color: white;
+  }
+#loginbutton{
+    color: white;
+    background-color: #4CAF50;
+}  
+
+.form-container h2 {
+  margin-top: 0;
+}
+
+.form-container label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.form-container button[type="button"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+.form-container .error {
+  color: red;
+  margin-top: 5px;
+}
+
+.form-container .fa-exclamation-circle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+}
+
+.form-container .fa-check-circle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: green;
+}
+
+.form-container .fa-user,
+.form-container .fa-lock {
+  position: absolute;
+  left: 760px;
+  margin: 20px 20px 20px 10px;
+  transform: translateY(-50%);
+}
+
+#loginbutton {
+  background-color: #28a745;
+}
+
+.btn-cancel {
+  background-color: #17a2b8;
+}
+.error {
+  color: red;
+}
+
+.form-control.error input {
+  border-color: red;
+}
+
+.form-control.error .fas.fa-exclamation-circle {
+  color: red;
+}
